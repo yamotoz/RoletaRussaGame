@@ -1,0 +1,658 @@
+import random
+from time import sleep
+import sys
+import os
+import webbrowser
+
+
+def restart_program():
+  python = sys.executable
+  os.execl(python, python, *sys.argv)
+def erroType():
+  print("\033[31:1mÉ PRA DIGITAR UM NUMERO VALIDO SEU IMBECIL.")
+  sleep(2)
+  print("COMRROPENDO O SISTEMA")
+  print("5")
+  sleep(0.5)
+  print("4")
+  sleep(0.5)
+  print("3")
+  sleep(0.5)
+  print("2")
+  sleep(0.5)
+  print("1")
+  sleep(0.5)
+  print("MORTE ABSOLUTA KKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK\033[m")
+def BemVindo():
+  print("\033[31:1m🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥\033[m")
+  print("\033[31:1m          BEM VINDO AO INFERNO             \033[m")
+  print("\033[31:1m🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥\033[m")
+  sleep(1)
+  print("\033[31mse caso for fraco e quiser sair digite 0\033[m")
+  pontos()
+def lobby():
+  print("\033[33:0m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\033[m")
+  print("\033[33:0m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\033[m")
+  primeiro = print("\033[33m1-🔥MODO FOGUINHO\033[m")
+  segundo = print("\033[34m2-🔥🔥🔥MODO PERTUBADOR\033[m")
+  terceiro = print("\033[35m3-🔥🔥🔥🔥🔥MODO DEMONIACO\033[m")
+  print("\033[33:0m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\033[m")
+  print("\033[33:0m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\033[m")
+  pontos()
+
+
+def pontos():
+  print("🔥")
+  sleep(0.3)
+  print("🔥")
+  sleep(0.3)
+  print("🔥")
+  print("🔥")
+  sleep(0.3)
+  print("🔥")
+  sleep(0.3)
+  print("🔥")
+def pontostres():
+  print(".")
+  sleep(0.3)
+  print(".")
+  sleep(0.3)
+  print('.')
+  sleep(0.3)
+
+
+def Demoniaco():
+  pontosDemoniacos = 0
+  sleep(0.5)
+  print("\033[31m--------------------------------\033[m\n"
+        "\033[35m    BEM VINDO AO MODO DEMONIACO \033[m\n"
+        "\033[31m--------------------------------\033[m")
+  sleep(2)
+  pontos()
+  print("DICA:\npara ganhar nesse modo,"
+        "voce precisa sobreviver a 20 tiros!\n"
+        "\033[31mmá sorte pra você\033[m")
+  print("\033[35mOBS: O tambor tem 1 de 8 balas\033[m")
+  pontostres()
+
+  while True:
+    try:
+      bala = random.randint(1, 8)
+      jogador = int(input("\033[31mTAKE YOUR CHANCE:\033[m"))
+    except (TypeError, KeyboardInterrupt, ValueError):
+      erro = erroType()
+    else:
+      if jogador >= 9 or jogador <= 0:
+        print("\033[31mdigita um numero de um a oito BURRO\033[m")
+      elif jogador == bala:
+        pontos()
+        print("\033[31:1mSE LASCOU KKKK, MORREU 💔💔💔💔\033[m")
+        break
+      else:
+        print("\033[32:1mPARABENS VERME, VOCE SOBREVIVEU👑")
+        pontosDemoniacos += 1
+        print(f"voce esta com {pontosDemoniacos} PONTOS\033[m")
+      if pontosDemoniacos == 30:
+        print(
+            "\033[32m🎁QUE INTERESSANTE, VOCE SOBREVIVEU AO INFENO DEMONIACO🎁\033[m"
+        )
+        break
+def Pertubador():
+  pontosPertubadores = 0
+  sleep(0.5)
+  print("\033[31m------------------------------------\033[m\n"
+        "\033[34m    BEM VINDO AO MODO PERTUBADOR \033[m\n"
+        "\033[31m------------------------------------\033[m")
+  sleep(2)
+  pontos()
+  print("DICA:para ganhar nesse modo,"
+        "voce precisa sobreviver a 10 tiros!\n"
+        " \033[31mmá sorte pra você\033[m")
+  print("\033[34mOBS: O tambor tem 1 de 4 balas\033[m")
+  pontostres()
+
+  while True:
+    try:
+      bala = random.randint(1, 4)
+      jogador = int(input("\033[31mTAKE YOUR CHANCE:\033[m"))
+    except (TypeError, KeyboardInterrupt, ValueError):
+      erro = erroType()
+    else:
+      if jogador >= 5 or jogador <= 0:
+        print("\033[31mdigita um numero de um até 4 BURRO\033[m")
+      elif jogador == bala:
+        pontos()
+        print("\033[31:1m💀💀💀ASSOMBRADO ETERNAMENTE💀💀💀\033[m")
+        pontostres()
+        print("\033[31m☠MORREU☠\033[m")
+        break
+      else:
+        print("\033[32:1mPARABENS VERME, VOCE SOBREVIVEU👑")
+        pontosPertubadores += 1
+        print(f"voce esta com {pontosPertubadores} PONTOS\033[m")
+      if pontosPertubadores == 10:
+        print(
+            "\033[32m🎁QUE INTERESSANTE, VOCE SOBREVIVEU AO INFENO PERTUBADOR🎁\033[m"
+        )
+        break
+def Foguinho():
+  pontosFOGO = 0
+  sleep(0.5)
+  print("\033[31m--------------------------------\033[m\n"
+        "\033[33m    BEM VINDO AO MODO FOGUINHO \033[m\n"
+        "\033[31m--------------------------------\033[m")
+  sleep(2)
+  pontos()
+  print("DICA:para ganhar nesse modo,"
+        "voce precisa sobreviver a 5 tiros!\n"
+        " \033[31mmá sorte pra você\033[m")
+  print("\033[33mOBS: O tambor tem 1 de 3 balas\033[m")
+  pontostres()
+
+  while True:
+    try:
+      bala = random.randint(1, 4)
+      jogador = int(input("\033[31mTAKE YOUR CHANCE:\033[m"))
+    except (TypeError, KeyboardInterrupt, ValueError):
+      erro = erroType()
+    else:
+      if jogador >= 4 or jogador <= 0:
+        print("\033[31mdigita um numero de um a TRES BURRO\033[m")
+      elif jogador == bala:
+        pontos()
+        print(
+            "\033[31:1m🔥🔥🔥ENGOLIDO DEMONIACAMENTE PELO MAR DE CHAMAS🔥🔥🔥\033[m")
+        pontostres()
+        print("\033[31m☠MORREU☠\033[m")
+        break
+      else:
+        print("\033[32:1mPARABENS VERME, VOCE SOBREVIVEU")
+        pontosFOGO += 1
+        print(f"voce esta com {pontosFOGO} PONTOS\033[m")
+      if pontosFOGO == 5:
+        print(
+            "\033[32m🎁QUE INTERESSANTE, VOCE SOBREVIVEU AO INFERNO MAIS FRACO KKKK👑\033[m"
+        )
+        break
+
+
+def frutinhas():
+    print("1-\033[35mPitaya\033[m")
+    sleep(0.5)
+    print("2-\033[33mTamarino\033[m")
+    sleep(0.5)
+    print("ou")
+    sleep(0.5)
+    print("3-\033[30mcoco\033[m")
+    sleep(2)
+def lobbyD2():
+    sleep(1)
+    print("\033[32mVejo que ganhou , agora o proximo desafio inicia\033[m")
+    sleep(2)
+    print("\033[31mmá sorte pra voce kkkkkkk\033[m")
+    sleep(2)
+def respIn():
+    print("\033[31mResposta incorreta\033[m")
+    print("\033[32mboa sorte na proxima\033[m")
+  
+def Dados():
+  contPontos = 0
+  print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+  sleep(1)
+  print("\033[36m🎲🎲🎲Bem vindo ao jogo dos Dados🎲🎲🎲\033[m|\n"
+        "para passar para a proxima fase ganhe 3 vezes")
+  print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+  sleep(1)
+  check = False
+  while True:
+    Dado = [1, 2, 3, 4, 5, 6]
+    jogadorDado = random.choice(Dado)
+    inimigo = random.choice(Dado)
+    print("🎲jogando dados🎲")
+    pontostres()
+    sleep(2)
+    print(f"voce conseguiu o numero {jogadorDado} e seu inimigo {inimigo}")
+    if jogadorDado == inimigo:
+      print('\033[36mEMPATOU!: empates não dão pontos\033[m')
+      sleep(1)
+    if jogadorDado > inimigo:
+      print("\033[32mGanhou!!!\033[m")
+      contPontos += 1
+      print(f"\033[32mvocê possui {contPontos} pontos\033[m")
+      perguntaDado = int(input("deseja AVANÇAR?\n\033[32m1-SIM\033[m, \033[31m2-NÃ0\033[m\n"))
+      if perguntaDado == 1:
+        print("contianuando....")
+        sleep(1)
+      if perguntaDado == 2:
+        restart_program()
+      if perguntaDado >= 3 or perguntaDado == 0:
+        print("digite um numero \033[32mVALIDO\033[m BURRO")
+        sleep(2)
+    if contPontos == 3:
+      print('\033[32mparabens jogador voce venceu os dados\033[m\n'
+            ' \033[32mVAMOS PARA A PROXIMA ETAPA!!!\033[m')
+      pontostres()
+      sleep(2)
+      win = True
+      return win
+      break
+    if jogadorDado < inimigo:
+      print("PERDEU OTARIO")
+      pontostres()
+      sleep(2)
+      restart_program()
+def cartas():
+  cont = 0
+  print("-------------------------------------------")
+  print("🃏🃏🃏BEM VINDO AO DESAFIO DAS CARTAS🃏🃏🃏")
+  print("-------------------------------------------")
+  sleep(0.5)
+  while True:
+    wincard = False
+    cartasA = [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    cartas = [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
+    primeiraJ = random.choice(cartas)
+    segundaJ = random.choice(cartas)
+    totalJ = primeiraJ + segundaJ
+    print(f"voce tirou {primeiraJ} e {segundaJ}")
+    pontostres()
+    sleep(1)
+    primeiraI = random.choice(cartasA)
+    segundaI = random.choice(cartasA)
+    totalI = primeiraI + segundaI
+    print(f"seu adversario tirou {primeiraI} e {segundaI}")
+    pontostres()
+    sleep(1)
+    if totalJ == totalI:
+      print('\033[36mEMPATOU!: empates não dão pontos\033[m')
+    if totalJ > totalI:
+      cont = cont + 1
+      print("\033[32mGanhou!!!\033[m"
+            f"voce tem {cont} pontos")
+    if cont == 3:
+      print("\033[32mParabéns voce passou pra ultima fase\033[m")
+      b = wincard = True
+      return b
+      break
+    if totalJ < totalI:
+      print("\033[31mPERDEU OTARIO\033[m")
+      sleep(1)
+      restart_program()
+
+def jogoFrutas():  
+  while True:
+    desafio1 = False
+    Desafio2 = False
+    desafio3 = False
+    #--------------------LOBBY---------------------------
+    pontostres()
+    print("\033[32mestou surpreso que voce chegou até aqui mortal!\033[m")
+    pontostres()
+    sleep(2.5)
+    print("\033[33m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\033[m")
+    sleep(0.5)
+    print("\033[36m            FEIRA DO GUE GUEL E RODROD                       ")
+    sleep(0.5)
+    print("\033[33m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\033[m")
+    pontostres()
+  
+    #---------------inicialização da função--------------------
+  
+    print("olá campeão essa é a ultima fase do jogo, parabens por chegar até aqui")
+    sleep(2)
+    pontostres()
+    print("DESAFIO 1")
+    sleep(1)
+    #-------------------DESAFIO 1----------------------
+    Sterob = random.randint(1,3)
+    print("olá meu nome é Sterob sou ou grão mestre da Feira, em qual fruta eu penso?")
+    sleep(0.5)
+    frutinhas()
+    desafio0 = False
+    try:
+      resp = int(input("qual fruta o grão mestre Sterob pensa?:\n"))
+      
+    except (ValueError, TypeError, KeyboardInterrupt):
+      print("\033[31mERRO, escreva um numero infeliz\033m")
+      print("\033[31mtente novamente\033[m")
+      break
+    else:
+      if resp == Sterob:
+        print("\033[32mParabens, essa era a fruta que eu estava pensando\033[m")
+        desafio0 = True
+        sleep(1)
+        print("\033[32mVoce ganhou do mestre Sterob\033[m")
+        sleep(1)
+      if resp != Sterob:
+        print("\033[31mNão era essa a fruta que eu estava pensando\033[m")
+        break
+    #-----------------INICIALIZANDO O DESAFIO 2-----------------
+    if desafio0 == True:
+  
+      if resp == 1:
+        #Pitaya
+        lobbyD2()
+        print("\033[35mQuantas são as variedades MAIS FAMOSAS da Pitaya:\033[m")
+        sleep(2)
+        print("\033[35m------------------------\033[m")
+        print("1- Uma variedade")
+        print("2- Duas variedades")
+        print("3- Tres variedades")
+        print("4- Quatro variedades")
+        print("5- Cinco variedades")
+        print("\033[35m------------------------\033[m")
+        sleep(2)
+        try:
+          respPitaya2 = int(input("SUA RESPOSTA:"))
+          if respPitaya2 == 3:
+            print("\033[32mParabens, ela possui apenas 3 opções mesmo kkkk\033[m")
+            desafio1 = True
+        except (ValueError, TypeError, KeyboardInterrupt):
+          print("\033[31mdigite um numero Animal, não uma palavra\033[m")
+        else:
+          if respPitaya2 > 3 and respPitaya2 <= 2 and respPitaya2 == 0:
+            respIn()
+            restart_program()
+  
+      if resp == 2:
+        #Tamarino
+        lobbyD2()
+        print("Quantas sementes em media o tamarino possui?")
+        sleep(2)
+        print("\033[33m------------------------\033[m")
+        print("1- 1 a 10 sementes")
+        print("2- 10 a 20 sementes")
+        print("3- 20 a 30 sementes")
+        print("4- 30 a 40 sementes")
+        print("5- 40 a 50 sementes")
+        print("\033[33m------------------------\033[m")
+        sleep(2)
+        try:
+          respTamarino2 = int(input("Quantas sementes?:"))
+          if respTamarino2 == 1:
+            print("\033[32mParabens o tamarino em media possui de 1 a 10 sementes\033[m")
+            desafio1 = True
+        except (ValueError, TypeError, KeyboardInterrupt):
+          print("\033[31mdigite um numero Animal, não uma palavra\033[m")
+        else:
+          if respTamarino2 > 1 and respTamarino2 == 0 and respTamarino2 < 1:
+            respIn()
+            restart_program()
+  
+      if resp == 3:
+        #Coco
+        lobbyD2()
+        print("Quantas sementes tem o coco")
+        print("\033[30m------------------------\033[m")
+        print("1- 1 sementes")
+        print("2- 2 sementes")
+        print("3- 3 sementes")
+        print("4- 4 sementes")
+        print("5- 5 sementes")
+        print("\033[30m------------------------\033[m")
+        try:
+          respCoco2 = int(input("Quantas sementes?:"))
+          if respCoco2 == 1:
+            print("\033[32mO coco é sua propria semente,"
+                  "teoricamente a agua de coco\033[m")
+            desafio1 = True
+        except (ValueError, TypeError, KeyboardInterrupt):
+          print("\033[31mdigite um numero Animal, não uma palavra\033[m")
+        else:
+          if respCoco2 > 1 and respCoco2 == 0 and respCoco2 < 1:
+            respIn()
+            restart_program()
+    print("\033[32mPARABENS HUMANO, MEU NOME É RODROD, PASSE PELO MEU DESAFIO\033[m")
+    sleep(2)
+    #--------------------DESAFIO 3-------------------
+    if desafio1 == True:
+      if resp == 1:
+        # Pitaya
+        lobbyD2()
+        print("\033[35mQual é a variedade de pitaya mais doce?:\033[m")
+        sleep(2)
+        print("\033[35m------------------------\033[m")
+        print("1- Casca vermelha e poupa vermelha?")
+        print("2- Casca vermelha e poupa branca?")
+        print("3- Casca amarela e poupa branca?")
+        print("4- Casca amarela e poupa vermalha?")
+        print("5- Casca amarela e poupa amarela?")
+        print("\033[35m------------------------\033[m")
+        sleep(2)
+        try:
+          respPitaya3 = int(input("Quantas variedades?:"))
+          if respPitaya3 == 3:
+            print("\033[32mParabens, Resposta correta!!!\033[m")
+            Desafio2 = True
+        except (ValueError, TypeError, KeyboardInterrupt):
+          print("\033[31mdigite um numero Animal, não uma palavra\033[m")
+        else:
+          if respPitaya3 <= 2 and respPitaya3 == 0 and respPitaya3 > 3:
+            respIn()
+            restart_program()
+  
+      if resp == 2:
+        # Tamarino
+        lobbyD2()
+        print("Quais regiões do brasil o tamarindo é mais consumido?")
+        sleep(2)
+        print("\033[33m------------------------\033[m")
+        print("1- sul e sudeste")
+        print("2- centro-oeste e sudeste")
+        print("3- norte e centro-oeste")
+        print("4- norte e nordeste")
+        print("5- nordeste e sul")
+        print("\033[33m------------------------\033[m")
+        sleep(2)
+        try:
+          respTamarino3 = int(input("Qual região?:"))
+          if respTamarino3 == 4:
+            print("\033[32mParabens, essa é a região correta\033[m")
+            Desafio2 = True
+        except (ValueError, TypeError, KeyboardInterrupt):
+          print("\033[31mdigite um numero Animal, não uma palavra\033[m")
+        else:
+          if respTamarino3 <= 2 and respTamarino3 == 0 and respTamarino3 > 4:
+            respIn()
+            restart_program()
+  
+      if resp == 3:
+        # Coco
+        lobbyD2()
+        print("o coco é originario de onde?")
+        print("\033[30m------------------------\033[m")
+        print("1- africa setentrional")
+        print("2- africa meridional")
+        print("3- oceania")
+        print("4- sudeste da Ásia")
+        print("5- sul da asia")
+        print("\033[30m------------------------\033[m")
+        try:
+          respCoco3 = int(input("Qual é sua origem?:"))
+          if respCoco3 == 4:
+            print("\033[32mResposta correta, ele é do sudeste da Asia\033[m")
+            Desafio2 = True
+        except (ValueError, TypeError, KeyboardInterrupt):
+          print("\033[31mdigite um numero Animal, não uma palavra\033[m")
+        else:
+          if respCoco3 <= 3 and respCoco3 > 4 and respCoco3 == 0:
+            respIn()
+            restart_program()
+    print(
+        "\033[32mPARABENS HUMANO, MEU NOME É GUEGUEL,\033[m \033[31mESPERO QUE PERCA AGORA\033[m"
+    )
+    sleep(2)
+    #-------------------------DESAFIO 4 ------------------------
+    if Desafio2 == True:
+      if resp == 1:
+        # Pitaya
+        lobbyD2()
+        print("\033[35mQuantas sementes em media tem uma pitaya?\033[m")
+        sleep(2)
+        print("\033[35m------------------------\033[m")
+        print("1- 5 sementes?")
+        print("2- 10 sementes?")
+        print("3- 15 sementes?")
+        print("4- 20 sementes?")
+        print("5- 25 sementes?")
+        print("\033[35m------------------------\033[m")
+        sleep(2)
+        try:
+          respPitaya4 = int(input("Quantas sementes?:"))
+          if respPitaya4 == 3:
+            print("\033[32mParabens, Resposta correta!!!\033[m")
+            desafio3 = True
+        except (ValueError, TypeError, KeyboardInterrupt):
+          print("\033[31mdigite um numero Animal, não uma palavra\033[m")
+        else:
+          if respPitaya4 > 3 and respPitaya4 <= 2 and respPitaya4 == 0:
+            respIn()
+            restart_program()
+  
+      if resp == 2:
+        # Tamarino
+        lobbyD2()
+        print("O tamarindo é originario de onde?")
+        sleep(2)
+        print("\033[33m------------------------\033[m")
+        print("1- asia e europa")
+        print("2- america do norte central e sul")
+        print("3- europa e norte da asia")
+        print("4- antartica")
+        print("5- africa equatorial e sul da asia")
+        print("\033[33m------------------------\033[m")
+        sleep(2)
+        try:
+          respTamarino4 = int(input("Qual origem?:"))
+          if respTamarino4 == 5:
+            print("\033[32mParabens, essa é a região correta,"
+                  "africa equatorial e sul da asia\033[m")
+            desafio3 = True
+        except (ValueError, TypeError, KeyboardInterrupt):
+          print("\033[31mdigite um numero Animal, não uma palavra\033[m")
+        else:
+          if respTamarino4 <= 4 and respTamarino4 > 5 and respTamarino4 == 0:
+            respIn()
+            restart_program()
+  
+      if resp == 3:
+        # Coco
+        lobbyD2()
+        print("Qual é o dia mundial do coco?")
+        print("\033[30m------------------------\033[m")
+        print("1- no dia 1 de setembro")
+        print("2- no dia 2 de setembro")
+        print("3- no dia 4 de setembro")
+        print("4- no dia 9 de setembro")
+        print("5- no dia 19 de setembro")
+        print("\033[30m------------------------\033[m")
+        try:
+          respCoco4 = int(input("Qual dia?:"))
+          if respCoco4 == 2:
+            print("\033[32mPARABENS, esse era o dia correto.\033[m")
+            desafio3 = True
+        except (ValueError, TypeError, KeyboardInterrupt):
+          print("\033[31mdigite um numero Animal, não uma palavra\033[m")
+        else:
+          if respCoco4 <= 1 and respCoco4 > 2 and respCoco4 == 0:
+            respIn()
+            restart_program()
+    #-----------------FINAL DO JOGO-------------------
+    if desafio3 == True:
+      print("\033[32mPARABENS SEU TOLETE DE MIL BOSTAS,"
+            "VOCE GANHOU O JOGO DE MIGUEL E RODRIGO, COMO CONSEQUENCIA,"
+            " ESTREGAREMOS UM PRESENTE\033m.")
+      sleep(2)
+      perfinal = int(
+          input("Deseja aceitar?\033[32m1-SIM\033[m,\033[31m 2-NÃO\033[m"))
+      if perfinal == 1:
+        print("vou logo avisando que esse é dos bons viu kkkkkkkkkkkkk")
+        sleep(4)
+        site = ('https://www.youtube.com/watch?v=GAxLcwSQW40')
+        webbrowser.open(site)
+        break
+      else:
+        print("\033[32mObrigado por jogar um dos nossos jogos, sua sorte é fantastica\033[m")
+        break
+#--------------------------------------------PROGRAMA PRINCIPAL---------------------------------
+bemvindo = BemVindo()
+while True:
+  lobby()
+
+  try:
+
+    jogador = int(
+        input("\033[31:1mdigite o modo que deseja jogar MORTAL:\033[m"))
+
+    if jogador == 0:
+      print("\033[31:1mseu FRACO\033[m")
+      break
+    if jogador >= 5:
+      print("\033[31mescreve um numero certo seu BAITINGA\033[m")
+      sleep(2)
+#==-==-==-==-==-==-==-==-==-==-# MODO DE JOGO DEMONIACO=-==-==-=-==-==-==-==-==-==-==-=-
+    if jogador == 3:
+      demon = Demoniaco()
+      per = int(
+          input("quer jogar novamente?\n"
+                "\033[32m1-SIM\n"
+                "\033[31m2-NÂO\n\033[m"))
+      if per == 1:
+        print(f"reiniciando...")
+        sleep(1)
+        restart_program()
+      if per == 2:
+        break
+#=-==-==-==-==-==-==-==-==-==-==-=# MODO DE JOGO PERTUBADOR=-==-==-==-==-=-==-==-==-==-
+    if jogador == 2:
+      pertubador = Pertubador()
+      per2 = int(
+          input("quer jogar novamente?\n"
+                "\033[32m1-SIM\n"
+                "\033[31m2-NÂO\n\033[m"))
+      if per2 == 1:
+        print(f"reiniciando...")
+        sleep(1)
+        restart_program()
+      if per2 == 2:
+        break
+#=-==-==-==-==-==-==-==--==-==-==-=# MODO DE JOGO FOGUINHO=-==-==-==-==-=-==-===-==-==-=
+    if jogador == 1:
+      fogo = Foguinho()
+      per3 = int(
+          input("quer jogar novamente?\n"
+                "\033[32m1-SIM\n"
+                "\033[31m2-NÂO\n\033[m"))
+      if per3 == 1:
+        print(f"reiniciando...")
+        sleep(1)
+        restart_program()
+      if per3 == 2:
+        break
+#=-==-==-==-==-==-==-==-==-==-===-=# MODO DE JOGO SECRETO=-==-==-==-==-=-==-=====-==-=-=
+    if jogador == 4:
+      pontos()
+      print('\033[32mPARABENS MORTAL, VOCÊ ACHOU O MODO secreto QUER JOGAR?\033[m\n'
+          '\033[32m1-SIM\n'
+          '\033[31m2-NÃO\033[m')
+      resposta = int(input("digite sua resposta:"))
+      if resposta <= 0 or resposta >= 3:
+        print('\033[31minsira uma opção valida seu animal!!\033[m')
+      if resposta == 1:
+        print('☠️ ☠️PREPARE-SE☠️ ☠️')
+        Dados()
+        cartas()
+        jogoFrutas()
+      if resposta == 2:
+        break
+#=-==-==-==-==-==-==-===-==-==-==-final do tratamento de erro=-==-===-=-==-==-==-==-=-=
+  except (ValueError, TypeError, KeyboardInterrupt):
+    error = erroType()
+    try:
+      print("Tu é BURRO por acaso? È pra dizer o modo do jogo 1, 2 ou 3 ")
+      sleep(4)
+    except (ValueError, TypeError, KeyboardInterrupt):
+      print("")
+  finally:
+    print("\033[32mGOOD LUCK\033[m")
+  break
