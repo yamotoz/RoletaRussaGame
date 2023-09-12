@@ -1,5 +1,5 @@
 # RoletaRussaGame
-This game are maked from rodrigo and miguel
+This game are maked from rodrigo and miguel.
 Este foi um jogo projetado com o intuito de entretenimento e melhoria das habilidades do participante que fez o codigo,
 ele foi escrito em python,
 todos os errors do programa foram resolvidos
